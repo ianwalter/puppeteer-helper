@@ -1,6 +1,22 @@
 {
   "name": "@ianwalter/puppeteer-helper",
   "description": "An AVA helper that makes a Puppeteer page available to a test",
+  "version": "0.0.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ianwalter/puppeteer-helper.git"
+  },
+  "keywords": [
+    "AVA",
+    "Puppeteer",
+    "helper"
+  ],
+  "author": "Ian Walter <public@iankwalter.com> (https://iankwalter.com)",
+  "license": "SEE LICENSE IN LICENSE",
+  "bugs": {
+    "url": "https://github.com/ianwalter/puppeteer-helper/issues"
+  },
+  "homepage": "https://github.com/ianwalter/puppeteer-helper#readme",
   "module": "dist/puppeteer-helper.m.js",
   "main": "dist/puppeteer-helper.js",
   "scripts": {
