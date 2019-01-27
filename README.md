@@ -45,3 +45,4 @@ Created by [Ian Walter](https://iankwalter.com)
 [npmImage]: https://img.shields.io/npm/v/@ianwalter/puppeteer-helper.svg
 [npmUrl]: https://www.npmjs.com/package/@ianwalter/puppeteer-helper
 [recipeUrl]: https://github.com/avajs/ava/blob/master/docs/recipes/puppeteer.md
+[licenseUrl]: https://github.com/ianwalter/puppeteer-helper/blob/master/LICENSE
