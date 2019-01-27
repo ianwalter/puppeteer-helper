@@ -6,7 +6,7 @@
 
 ## About
 
-[recipe][recipeUrl]
+This helper is based on a [recipe][recipeUrl] that can be found in AVA's docs.
 
 ## Installation
 
@@ -17,6 +17,7 @@ yarn add @ianwalter/puppeteer-helper --dev
 ## Usage
 
 ```js
+import test from 'ava'
 import puppeteerHelper from '@ianwalter/puppeteer-helper'
 
 const withPage = puppeteerHelper(['./dist/my-library.iife.js'])
