@@ -14,6 +14,11 @@ This helper is based on a [recipe][recipeUrl] that can be found in AVA's docs.
 yarn add @ianwalter/puppeteer-helper --dev
 ```
 
+## Warning
+
+This is meant for testing. You wouldn't want to run untrusted code as root with
+this since sandboxing is disabled.
+
 ## Usage
 
 ```js

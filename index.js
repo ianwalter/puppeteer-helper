@@ -1,9 +1,11 @@
 import puppeteer from 'puppeteer'
 
-export default function puppeteerHelper (scripts = [], config) {
+const defaultConfig = { args: ['--no-sandbox', '--disable-setuid-sandbox'] }
+
+export default function puppeteerHelper (scripts = [], config = {}) {
   return async function withPage (t, run) {
     // Create the browser and page.
-    const browser = await puppeteer.launch(config)
+    const browser = await puppeteer.launch(Object.assign(defaultConfig, config))
     const page = await browser.newPage()
 
     // Add given scripts to the page.
