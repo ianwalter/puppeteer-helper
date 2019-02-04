@@ -1,6 +1,10 @@
 import puppeteer from 'puppeteer'
 
-const defaultConfig = { args: ['--no-sandbox', '--disable-setuid-sandbox'] }
+const skipDownload = process.env.PUPPETEER_SKIP_CHROMIUM_DOWNLOAD === 'true'
+const defaultConfig = {
+  ...(skipDownload ? { executablePath: 'google-chrome-unstable' } : {}),
+  args: ['--no-sandbox', '--disable-setuid-sandbox']
+}
 
 export default function puppeteerHelper (scripts = [], config = {}) {
   return async function withPage (t, run) {

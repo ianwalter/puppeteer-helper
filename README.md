@@ -37,6 +37,11 @@ test('my library works in a real browser', withPage, async (t, page) => {
 
 ## API
 
+## Related
+
+* [`ianwalter/puppeteer`][iwPuppeteerUrl] - A GitHub Action / Docker image for
+  Puppeteer, the Headless Chrome Node API
+
 ## License
 
 Apache 2.0 with Commons Clause - See [LICENSE][licenseUrl]
@@ -50,4 +55,5 @@ Created by [Ian Walter](https://iankwalter.com)
 [npmImage]: https://img.shields.io/npm/v/@ianwalter/puppeteer-helper.svg
 [npmUrl]: https://www.npmjs.com/package/@ianwalter/puppeteer-helper
 [recipeUrl]: https://github.com/avajs/ava/blob/master/docs/recipes/puppeteer.md
+[iwPuppeteerUrl]: https://github.com/ianwalter/puppeteer
 [licenseUrl]: https://github.com/ianwalter/puppeteer-helper/blob/master/LICENSE
