@@ -28,7 +28,8 @@
     "dist"
   ],
   "dependencies": {
-    "puppeteer": "^1.11.0"
+    "puppeteer": "^1.11.0",
+    "webpack": "^4.29.3"
   },
   "devDependencies": {
     "@ianwalter/clone": "^2.0.1",
