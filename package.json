@@ -28,6 +28,7 @@
     "dist"
   ],
   "dependencies": {
+    "memory-fs": "^0.4.1",
     "puppeteer": "^1.11.0",
     "webpack": "^4.29.3"
   },
