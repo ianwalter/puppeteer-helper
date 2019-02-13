@@ -25,6 +25,7 @@ JavaScript to evaluate in the browser (`something.js`):
 
 ```js
 import subpub from '@ianwalter/subpub'
+
 window.run((resolve, reject, arg) => {
   // Subscribe to the 'alerts' topic and resolve the evaluation when a message
   // is received.
