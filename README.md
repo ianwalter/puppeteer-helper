@@ -26,6 +26,8 @@ JavaScript to evaluate in the browser (`something.js`):
 ```js
 import subpub from '@ianwalter/subpub'
 
+// Run your evaluation inside of `window.run` which passes the resolve/reject functions 
+// from the returned promise and an arg if a second argument is passed to `t.evaluate`.
 window.run((resolve, reject, arg) => {
   // Subscribe to the 'alerts' topic and resolve the evaluation when a message
   // is received.
