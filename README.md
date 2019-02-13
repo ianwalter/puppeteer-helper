@@ -43,7 +43,7 @@ import puppeteerHelper from '@ianwalter/puppeteer-helper'
 
 const withPage = puppeteerHelper() // You can pass Puppeteer options here.
 
-test('message received', withPage, async t => {
+test('message received', withPage, async (t, page) => {
   t.is(await t.evaluate('./something.js'), 'Winter Snow Advisory!')
 })
 ```
