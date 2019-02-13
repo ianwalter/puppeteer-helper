@@ -21,21 +21,32 @@ this since sandboxing is disabled.
 
 ## Usage
 
+JavaScript to evaluate in the browser (`something.js`):
+
+```js
+import subpub from '@ianwalter/subpub'
+window.run((resolve, reject, arg) => {
+  // Subscribe to the 'alerts' topic and resolve the evaluation when a message
+  // is received.
+  subpub.sub('alerts', data => resolve(data.msg))
+
+  // Send a test message to the 'alerts' topic.
+  subpub.pub('alerts', { msg: 'Winter Snow Advisory!' })
+})
+```
+
+Using the evaluation script in an AVA test:
+
 ```js
 import test from 'ava'
 import puppeteerHelper from '@ianwalter/puppeteer-helper'
 
-const withPage = puppeteerHelper(['./dist/my-library.iife.js'])
+const withPage = puppeteerHelper() // You can pass Puppeteer options here.
 
-test('my library works in a real browser', withPage, async (t, page) => {
-  const result = await page.evaluate(() => {
-    return myLibrary.helloWorld()
-  })
-  t.is(result, 'Hello World!')
+test('message received', withPage, async t => {
+  t.is(await t.evaluate('./something.js'), 'Winter Snow Advisory!')
 })
 ```
-
-## API
 
 ## Related
 
