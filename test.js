@@ -3,6 +3,10 @@ import puppeteerHelper from '.'
 
 const withPage = puppeteerHelper()
 
-test('sets up a page with clone added to it', withPage, async t => {
-  t.is(await t.evaluate('./evals/clone.js'), 'function')
+test('evaluate', withPage, async t => {
+  t.is(await t.evaluate('./evals/http.js'), 'function')
+})
+
+test('evaluate with arg', withPage, async t => {
+  t.is(await t.evaluate('./evals/arg.js', { name: 'So Tied Up' }), 'So Tied Up')
 })

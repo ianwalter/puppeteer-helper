@@ -285,6 +285,13 @@
     "@babel/helper-plugin-utils" "^7.0.0"
     "@babel/helper-simple-access" "^7.1.0"
 
+"@babel/runtime@^7.2.0":
+  version "7.3.1"
+  resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.3.1.tgz#574b03e8e8a9898eaf4a872a92ea20b7846f6f2a"
+  integrity sha512-7jGW8ppV0ant637pIqAcFfQDDH1orEPGJb8aXfUozuCU3QqX7rX4DA8iwrbPrR1hcH0FTTHz47yQnk+bl5xHQA==
+  dependencies:
+    regenerator-runtime "^0.12.0"
+
 "@babel/template@^7.1.0", "@babel/template@^7.1.2", "@babel/template@^7.2.2":
   version "7.2.2"
   resolved "https://registry.yarnpkg.com/@babel/template/-/template-7.2.2.tgz#005b3fdf0ed96e88041330379e0da9a708eb2907"
@@ -330,11 +337,6 @@
   resolved "https://registry.yarnpkg.com/@ianwalter/clone/-/clone-1.0.3.tgz#7f800e17149b0099e08ca669185c2da976b74289"
   integrity sha512-nX1TtKPfOhXQBNr3FwDVjqSPFNZS10S2tuJKuH4Q4/WqWAzkdTHSVdNE4myVTHQStLEsuklJY91eE6VTBeRnDw==
 
-"@ianwalter/clone@^2.0.1":
-  version "2.0.1"
-  resolved "https://registry.yarnpkg.com/@ianwalter/clone/-/clone-2.0.1.tgz#c9f37e2d13e386d3a63e632e6a6199fd44d71bed"
-  integrity sha512-SiDz8Vh59ZzQk98HKxf54j5D/ER0hV8hPU78Lw5I5YzdJJUQK/pZGBQJO0bfJsNVmy8eAbjYR7N1IR0Mn1qsNg==
-
 "@ianwalter/dist@^1.4.0":
   version "1.4.0"
   resolved "https://registry.yarnpkg.com/@ianwalter/dist/-/dist-1.4.0.tgz#fc99fcee6fd6e42b83a6ea2cc6bb4a6e0e6b40e9"
@@ -353,6 +355,13 @@
     rollup-plugin-commonjs "^9.2.0"
     rollup-plugin-json "^3.1.0"
     rollup-plugin-node-resolve "^4.0.0"
+
+"@ianwalter/http@ianwalter/http#fix-76":
+  version "2.1.0"
+  resolved "https://codeload.github.com/ianwalter/http/tar.gz/d728045ec3cc3c7d9501f07216521b3562c1a566"
+  dependencies:
+    "@babel/runtime" "^7.2.0"
+    ky "^0.8.0"
 
 "@ianwalter/npm-short-name@^1.0.0":
   version "1.0.0"
@@ -3321,6 +3330,11 @@ kind-of@^6.0.0, kind-of@^6.0.2:
   resolved "https://registry.yarnpkg.com/kind-of/-/kind-of-6.0.2.tgz#01146b36a6218e64e58f3a8d66de5d7fc6f6d051"
   integrity sha512-s5kLOcnH0XqDO+FvuaLX8DDjZ18CGFk7VygH40QoKPUQhW4e2rvM0rwUq0t8IQDOwYSeLK01U90OjzBTme2QqA==
 
+ky@^0.8.0:
+  version "0.8.0"
+  resolved "https://registry.yarnpkg.com/ky/-/ky-0.8.0.tgz#7fc2e965bcbbd3d5e7986a004858e40fb5208825"
+  integrity sha512-nnYt5Ivmeau7k0uIt+YISFKxu4Wu1LRjqJLWSS2ec9eBgr8vKxju5OveDFxz4XSXAmmL+32oI7JwG6XUD05p8Q==
+
 latest-version@^3.0.0:
   version "3.1.0"
   resolved "https://registry.yarnpkg.com/latest-version/-/latest-version-3.1.0.tgz#a205383fea322b33b5ae3b18abee0dc2f356ee15"
@@ -4681,6 +4695,11 @@ regenerate@^1.4.0:
   version "1.4.0"
   resolved "https://registry.yarnpkg.com/regenerate/-/regenerate-1.4.0.tgz#4a856ec4b56e4077c557589cae85e7a4c8869a11"
   integrity sha512-1G6jJVDWrt0rK99kBjvEtziZNCICAuvIPkSiUFIQxVP06RCVpq3dmDo2oi6ABpYaDYaTRr67BEhL8r1wgEZZKg==
+
+regenerator-runtime@^0.12.0:
+  version "0.12.1"
+  resolved "https://registry.yarnpkg.com/regenerator-runtime/-/regenerator-runtime-0.12.1.tgz#fa1a71544764c036f8c49b13a08b2594c9f8a0de"
+  integrity sha512-odxIc1/vDlo4iZcfXqRYFj0vpXFNoGdKMAUieAlFYO6m/nl5e9KR/beGf41z4a1FI+aQgtjhuaSlDxQ0hmkrHg==
 
 regex-cache@^0.4.2:
   version "0.4.4"

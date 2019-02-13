@@ -32,7 +32,7 @@ export default function puppeteerHelper (config = {}) {
     t.evaluate = async (file, arg) => page.evaluate(
       `
         new Promise((resolve, reject) => {
-          window.run = cb => cb(resolve, reject, ${arg})
+          window.run = cb => cb(resolve, reject, ${JSON.stringify(arg)})
           try {
             ${await build(file)}
           } catch (err) {
