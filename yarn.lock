@@ -351,9 +351,10 @@
     rollup-plugin-json "^3.1.0"
     rollup-plugin-node-resolve "^4.0.0"
 
-"@ianwalter/http@ianwalter/http#fix-76":
-  version "2.1.0"
-  resolved "https://codeload.github.com/ianwalter/http/tar.gz/d728045ec3cc3c7d9501f07216521b3562c1a566"
+"@ianwalter/http@^2.1.1":
+  version "2.1.1"
+  resolved "https://registry.yarnpkg.com/@ianwalter/http/-/http-2.1.1.tgz#03b75f1b3b38e9d77594bdde2e353e2629f2e49b"
+  integrity sha512-9wMZFzBDb0dkLxoIorlgfSQT1v8sn/sUwC2QrFWi0PUAvMSDGTaUMReMHJ71iUlsKvV9HfjsTyuXULozoY/bYw==
   dependencies:
     "@babel/runtime" "^7.2.0"
     ky "^0.8.0"
