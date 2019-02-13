@@ -10,14 +10,26 @@ const defaultConfig = {
 }
 
 function build (entry) {
-  const compiler = webpack({ mode: 'development', target: 'web', entry, output: { filename: 'main.js' } })
+  // Create the Webpack compiler.
+  const compiler = webpack({
+    mode: 'development',
+    target: 'web',
+    entry,
+    output: { filename: 'main.js' }
+  })
+
+  // Create an in-memory filesystem to store Webpack output.
   const mfs = new MemoryFileSystem()
   compiler.outputFileSystem = mfs
+
   return new Promise((resolve, reject) => {
+    // Create the bundle.
     compiler.run(err => {
       if (err) {
         reject(err)
       }
+
+      // Read the output from the in-memory filesystem and return it.
       resolve(mfs.readFileSync(path.resolve('dist/main.js'), 'utf8'))
     })
   })
