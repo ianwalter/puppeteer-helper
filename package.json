@@ -33,7 +33,7 @@
     "webpack": "^4.29.3"
   },
   "devDependencies": {
-    "@ianwalter/dist": "^2.0.2",
+    "@ianwalter/dist": "^3.0.0",
     "@ianwalter/http": "^2.1.1",
     "ava": "^1.1.0",
     "eslint": "^5.12.0",
