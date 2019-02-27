@@ -71,7 +71,8 @@ export default function puppeteerHelper (config = {}) {
           ...prettydiff.defaults,
           mode: 'beautify',
           source: result.$html,
-          indent_size: 2
+          indent_size: 2,
+          space_close: true
         })
       } else {
         return result
