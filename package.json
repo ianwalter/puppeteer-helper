@@ -20,7 +20,7 @@
   "module": "dist/puppeteer-helper.m.js",
   "main": "dist/puppeteer-helper.js",
   "scripts": {
-    "lint": "eslint index.js test.js",
+    "lint": "eslint index.js test",
     "pretest": "dist",
     "test": "ava"
   },
@@ -29,6 +29,7 @@
   ],
   "dependencies": {
     "memory-fs": "^0.4.1",
+    "prettydiff": "^100.2.3",
     "puppeteer": "^1.11.0",
     "webpack": "^4.29.3"
   },

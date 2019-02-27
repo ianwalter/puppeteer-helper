@@ -13,3 +13,7 @@ test('evaluate with arg', withPage, async t => {
     'So Tied Up'
   )
 })
+
+test('element serialization', withPage, async t => {
+  t.snapshot(await t.evaluate('./test/helpers/serialization.js'))
+})
