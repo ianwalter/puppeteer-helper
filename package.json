@@ -29,6 +29,7 @@
   ],
   "dependencies": {
     "memory-fs": "^0.4.1",
+    "prettydiff": "^100.2.3",
     "puppeteer": "^1.11.0",
     "webpack": "^4.29.3"
   },

@@ -2,6 +2,7 @@ import path from 'path'
 import puppeteer from 'puppeteer'
 import webpack from 'webpack'
 import MemoryFileSystem from 'memory-fs'
+import prettydiff from 'prettydiff'
 
 const skipDownload = process.env.PUPPETEER_SKIP_CHROMIUM_DOWNLOAD === 'true'
 const defaultConfig = {
@@ -41,19 +42,41 @@ export default function puppeteerHelper (config = {}) {
     const browser = await puppeteer.launch(Object.assign(defaultConfig, config))
     const page = await browser.newPage()
 
-    t.evaluate = async (file, arg) => page.evaluate(
-      `
-        new Promise((resolve, reject) => {
-          window.run = cb => cb(resolve, reject, ${JSON.stringify(arg)})
-          try {
-            ${await build(file)}
-          } catch (err) {
-            reject(err)
-          }
+    t.evaluate = async (file, arg) => {
+      const result = await page.evaluate(
+        `
+          new Promise((resolve, reject) => {
+            const customResolve = payload => {
+              if (payload instanceof HTMLElement) {
+                resolve({ $html: payload.outerHTML })
+              } else {
+                resolve(payload)
+              }
+            }
+
+            window.run = cb => cb(customResolve, reject, ${JSON.stringify(arg)})
+
+            try {
+              ${await build(file)}
+            } catch (err) {
+              reject(err)
+            }
+          })
+        `,
+        arg
+      )
+
+      if (result.$html) {
+        return prettydiff.mode({
+          ...prettydiff.defaults,
+          mode: 'beautify',
+          source: result.$html,
+          indent_size: 2
         })
-      `,
-      arg
-    )
+      } else {
+        return result
+      }
+    }
 
     try {
       await run(t, page)
