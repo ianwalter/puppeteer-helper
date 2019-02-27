@@ -47,7 +47,7 @@ export default function puppeteerHelper (config = {}) {
         `
           new Promise((resolve, reject) => {
             const customResolve = payload => {
-              if (payload instanceof HTMLElement) {
+              if (payload && payload instanceof HTMLElement) {
                 resolve({ $html: payload.outerHTML })
               } else {
                 resolve(payload)
