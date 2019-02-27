@@ -66,7 +66,7 @@ export default function puppeteerHelper (config = {}) {
         arg
       )
 
-      if (result.$html) {
+      if (result && result.$html) {
         return prettydiff.mode({
           ...prettydiff.defaults,
           mode: 'beautify',
