@@ -20,7 +20,7 @@
   "module": "dist/puppeteer-helper.m.js",
   "main": "dist/puppeteer-helper.js",
   "scripts": {
-    "lint": "eslint index.js test.js",
+    "lint": "eslint index.js test",
     "pretest": "dist",
     "test": "ava"
   },
