@@ -3,6 +3,7 @@ import puppeteer from 'puppeteer'
 import webpack from 'webpack'
 import MemoryFileSystem from 'memory-fs'
 import prettydiff from 'prettydiff'
+import merge from '@ianwalter/merge'
 
 const skipDownload = process.env.PUPPETEER_SKIP_CHROMIUM_DOWNLOAD === 'true'
 const defaultConfig = {
@@ -10,14 +11,17 @@ const defaultConfig = {
   args: ['--no-sandbox', '--disable-setuid-sandbox']
 }
 
-function build (entry) {
+function build (entry, customConfig = {}) {
   // Create the Webpack compiler.
-  const compiler = webpack({
-    mode: 'development',
-    target: 'web',
-    entry,
-    output: { filename: 'main.js' }
-  })
+  const compiler = webpack(merge(
+    {
+      mode: 'development',
+      target: 'web',
+      entry,
+      output: { filename: 'main.js' }
+    },
+    customConfig
+  ))
 
   // Create an in-memory filesystem to store Webpack output.
   const mfs = new MemoryFileSystem()
@@ -42,7 +46,7 @@ export default function puppeteerHelper (config = {}) {
     const browser = await puppeteer.launch(Object.assign(defaultConfig, config))
     const page = await browser.newPage()
 
-    t.evaluate = async (file, arg) => {
+    t.evaluate = async (file, arg, webpackConfig) => {
       const result = await page.evaluate(
         `
           new Promise((resolve, reject) => {
@@ -57,7 +61,7 @@ export default function puppeteerHelper (config = {}) {
             window.run = cb => cb(customResolve, reject, ${JSON.stringify(arg)})
 
             try {
-              ${await build(file)}
+              ${await build(file, webpackConfig)}
             } catch (err) {
               reject(err)
             }

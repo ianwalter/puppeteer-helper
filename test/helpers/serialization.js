@@ -13,5 +13,7 @@ You can enter but can't leave. What am I?
   span.innerHTML = `A keyboard.`
   details.appendChild(span)
 
-  resolve(details)
+  // document.body.appendChild(details)
+
+  resolve(document.documentElement.innerHTML)
 })
