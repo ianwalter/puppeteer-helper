@@ -51,7 +51,9 @@ export default function puppeteerHelper (config = {}) {
         `
           new Promise((resolve, reject) => {
             const customResolve = payload => {
-              if (payload instanceof HTMLElement) {
+              if (
+                payload instanceof HTMLElement || payload instanceof SVGElement
+              ) {
                 resolve({ $html: payload.outerHTML })
               } else {
                 resolve(payload)
@@ -70,12 +72,13 @@ export default function puppeteerHelper (config = {}) {
         arg
       )
 
-      if (result.$html) {
+      if (result && result.$html) {
         return prettydiff.mode({
           ...prettydiff.defaults,
           mode: 'beautify',
           source: result.$html,
-          indent_size: 2
+          indent_size: 2,
+          space_close: true
         })
       } else {
         return result

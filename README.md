@@ -26,7 +26,7 @@ JavaScript to evaluate in the browser (`something.js`):
 ```js
 import subpub from '@ianwalter/subpub'
 
-// Run your evaluation inside of `window.run` which passes the resolve/reject functions 
+// Run your evaluation inside of `window.run` which passes the resolve/reject functions
 // from the returned promise and an arg if a second argument is passed to `t.evaluate`.
 window.run((resolve, reject, arg) => {
   // Subscribe to the 'alerts' topic and resolve the evaluation when a message
@@ -50,6 +50,15 @@ test('message received', withPage, async (t, page) => {
   t.is(await t.evaluate('./something.js'), 'Winter Snow Advisory!')
 })
 ```
+
+## Debugging
+
+To aid in debugging tests, pass `{ devtools: true }` to the `puppeteerHelper`
+call and then add `debugger` to the problem area in your evaluation script. This
+will stop the browser from automatically running in `headless` mode and pause
+execution where `debugger` is placed. This is helpful if you, for example, want
+to see/modify a snapshot of variables in the execution context within Chrome
+DevTools.
 
 ## Related
 
