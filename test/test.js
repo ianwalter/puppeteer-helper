@@ -31,3 +31,14 @@ test('evaluate on iframe', withPage, async (t, page) => {
   // iframe.
   t.is(await t.evaluate('./test/helpers/iframe.js', iframe), 'test')
 })
+
+test('evaluate with custom Webpack config', withPage, async (t, page) => {
+  t.context.webpack = {
+    resolve: {
+      alias: {
+        http: '@ianwalter/http'
+      }
+    }
+  }
+  t.is(await t.evaluate('./test/helpers/httpAlias.js'), 'function')
+})
