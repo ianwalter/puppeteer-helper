@@ -26,9 +26,10 @@ JavaScript to evaluate in the browser (`something.js`):
 ```js
 import subpub from '@ianwalter/subpub'
 
-// Run your evaluation inside of `window.run` which passes the resolve/reject functions
-// from the returned promise and an arg if a second argument is passed to `t.evaluate`.
-window.run((resolve, reject, arg) => {
+// Run your evaluation inside of `window.run` which passes the resolve/reject
+// functions from the returned promise and an arg if a second argument is passed
+// to `t.evaluate`.
+window.run((resolve, reject, args) => {
   // Subscribe to the 'alerts' topic and resolve the evaluation when a message
   // is received.
   subpub.sub('alerts', data => resolve(data.msg))
@@ -50,6 +51,13 @@ test('message received', withPage, async (t, page) => {
   t.is(await t.evaluate('./something.js'), 'Winter Snow Advisory!')
 })
 ```
+
+## API
+
+`t.evaluate(evaluationScriptPath, [frame])` - Runs the evaluation script (path
+is relative to process.cwd()) on the given frame (defaults to page). Arguments
+to the evaluate call can be supplied by adding them to `t.context.args`. A
+custom Webpack config can also be added to `t.context.webpack`.
 
 ## Debugging
 
