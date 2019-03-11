@@ -462,10 +462,10 @@
   resolved "https://registry.yarnpkg.com/@types/estree/-/estree-0.0.39.tgz#e177e699ee1b8c22d23174caaa7422644389509f"
   integrity sha512-EYNwp3bU+98cpU4lAWYYL7Zz+2gryWH1qbdDTidVd6hkiR6weksdbMadyXKXNPEkQFhXM+hVO9ZygomHXp+AIw==
 
-"@types/node@*", "@types/node@^10.12.27", "@types/node@^10.12.29":
-  version "10.12.29"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-10.12.29.tgz#c2c8d2d27bb55649fbafe8ea1731658421f38acf"
-  integrity sha512-J/tnbnj8HcsBgCe2apZbdUpQ7hs4d7oZNTYA5bekWdP0sr2NGsOpI/HRdDroEi209tEvTcTtxhD0FfED3DhEcw==
+"@types/node@*", "@types/node@^10.12.27", "@types/node@^10.12.30":
+  version "10.12.30"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-10.12.30.tgz#4c2b4f0015f214f8158a347350481322b3b29b2f"
+  integrity sha512-nsqTN6zUcm9xtdJiM9OvOJ5EF0kOI8f1Zuug27O/rgtxCRJHGqncSWfCMZUP852dCKPsDsYXGvBhxfRjDBkF5Q==
 
 "@webassemblyjs/ast@1.8.5":
   version "1.8.5"
@@ -4569,13 +4569,13 @@ pretty-ms@^4.0.0:
     parse-ms "^2.0.0"
 
 prettydiff@^100.2.3:
-  version "100.2.5"
-  resolved "https://registry.yarnpkg.com/prettydiff/-/prettydiff-100.2.5.tgz#2f10b9914fa46e7227857d3c0fa35b03c7842d6d"
-  integrity sha512-ue2Z7HyAmMwkeEnjJ5o2ixSkocuF/oJvuYztX6Xf1PrAvZ6ts3THsSowAr0wnp+kKmSEPHXzinmgsXdugF/Uvw==
+  version "100.2.6"
+  resolved "https://registry.yarnpkg.com/prettydiff/-/prettydiff-100.2.6.tgz#ba4bb74e752c7e1bb425242378f93510408f8a21"
+  integrity sha512-wyxIHAQ0TW33p8gWaC10lHsyeh4dvOG8VYsZD0QGcEyY6apvzvgynOa/yj1sjZW0sH6qiAJPneBeZrxEgEQNMQ==
   dependencies:
-    "@types/node" "^10.12.29"
+    "@types/node" "^10.12.30"
     file-saver "^1.3.8"
-    sparser "^1.0.8"
+    sparser "^1.0.9"
 
 process-nextick-args@~2.0.0:
   version "2.0.0"
@@ -5301,10 +5301,10 @@ sourcemap-codec@^1.4.1, sourcemap-codec@^1.4.4:
   resolved "https://registry.yarnpkg.com/sourcemap-codec/-/sourcemap-codec-1.4.4.tgz#c63ea927c029dd6bd9a2b7fa03b3fec02ad56e9f"
   integrity sha512-CYAPYdBu34781kLHkaW3m6b/uUSyMOC2R61gcYMWooeuaGtjof86ZA/8T+qVPPt7np1085CR9hmMGrySwEc8Xg==
 
-sparser@^1.0.8:
-  version "1.0.8"
-  resolved "https://registry.yarnpkg.com/sparser/-/sparser-1.0.8.tgz#27300e0fa38988580bc24cac50bd9073db97c38d"
-  integrity sha512-rqqMwRIXM7JWsMylUrJtmoVzHmyyw6yRPpcjavI1S6tKcYDx/7n4TiITMdKIsMOQEw9AboJf2DK0RjlrvGp5lA==
+sparser@^1.0.9:
+  version "1.0.10"
+  resolved "https://registry.yarnpkg.com/sparser/-/sparser-1.0.10.tgz#00714b1eaaf555f98e0713c8862fc5c6e820fa12"
+  integrity sha512-NKzLhL39m0EueutsUWS4hu2io7lKGJTx3tlXhkCLcKmFgVYZMRLGeckxrKSa3dKB7yZJ+DprL2HSp/Nrp6wH8Q==
   dependencies:
     "@types/node" "^10.12.27"
 
