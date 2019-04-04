@@ -28,7 +28,7 @@
     "dist"
   ],
   "dependencies": {
-    "@ianwalter/merge": "^2.0.1",
+    "@ianwalter/merge": "^3.0.0",
     "memory-fs": "^0.4.1",
     "prettydiff": "^100.2.3",
     "puppeteer": "^1.11.0",
