@@ -4,6 +4,10 @@
 
 [![npm page][npmImage]][npmUrl]
 
+## Archived
+
+Please use [bff][bffUrl] instead.
+
 ## About
 
 This helper is based on a [recipe][recipeUrl] that can be found in AVA's docs.
@@ -85,6 +89,7 @@ Created by [Ian Walter](https://iankwalter.com)
 [puppeteerUrl]: https://pptr.dev/
 [npmImage]: https://img.shields.io/npm/v/@ianwalter/puppeteer-helper.svg
 [npmUrl]: https://www.npmjs.com/package/@ianwalter/puppeteer-helper
+[bffUrl]: https://github.com/ianwalter/bff
 [recipeUrl]: https://github.com/avajs/ava/blob/master/docs/recipes/puppeteer.md
 [iwPuppeteerUrl]: https://github.com/ianwalter/puppeteer
 [licenseUrl]: https://github.com/ianwalter/puppeteer-helper/blob/master/LICENSE
