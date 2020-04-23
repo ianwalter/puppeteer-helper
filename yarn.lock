@@ -4585,14 +4585,14 @@ pretty-ms@^4.0.0:
   dependencies:
     parse-ms "^2.0.0"
 
-prettydiff@^100.2.3:
-  version "100.3.1"
-  resolved "https://registry.yarnpkg.com/prettydiff/-/prettydiff-100.3.1.tgz#3238ffa9bf649e22725ad01988a9ba9ce4a2e7c2"
-  integrity sha512-PE+emM/pr1lN/6C8m3+l4F2QHkT0FTQeHY6yLbb4QUnbPBbhg1iNvR88+iqxxkPam6SjsJ9ymSf3XF6UwyCAuA==
+prettydiff@^101.0.0:
+  version "101.0.0"
+  resolved "https://registry.yarnpkg.com/prettydiff/-/prettydiff-101.0.0.tgz#85d1760ab7332e3fcdb40a5212c93042920a3e4c"
+  integrity sha512-0WSaBQu6sIAomPHAOTUAQm2qDHzVIZOaWHGNYg69prumN8ubrLW+8uK9DGPsg3kDBAiAIYbCIPT944wB9EaxVQ==
   dependencies:
     "@types/node" "^10.12.30"
     file-saver "^1.3.8"
-    sparser "^1.1.1"
+    sparser "^1.1.3"
 
 process-nextick-args@~2.0.0:
   version "2.0.0"
@@ -5342,10 +5342,10 @@ sourcemap-codec@^1.4.4:
   resolved "https://registry.yarnpkg.com/sourcemap-codec/-/sourcemap-codec-1.4.4.tgz#c63ea927c029dd6bd9a2b7fa03b3fec02ad56e9f"
   integrity sha512-CYAPYdBu34781kLHkaW3m6b/uUSyMOC2R61gcYMWooeuaGtjof86ZA/8T+qVPPt7np1085CR9hmMGrySwEc8Xg==
 
-sparser@^1.1.1:
-  version "1.1.1"
-  resolved "https://registry.yarnpkg.com/sparser/-/sparser-1.1.1.tgz#5da91508f940091c8831988d9b7aa9663e83ea38"
-  integrity sha512-TlunOl2mPei0lcQR/6FwwkBx5znDWfEbkqQYvnJ92MQbSiH6ZJcS7YtYVn7RgDIltegkXfkY9R/NKfYinfWdfg==
+sparser@^1.1.3:
+  version "1.1.3"
+  resolved "https://registry.yarnpkg.com/sparser/-/sparser-1.1.3.tgz#47348874fe8365fc5c739296659df83a30110428"
+  integrity sha512-dV/G1Kn0AA/XR3wkih4hcgVVPrd0h1Fq177UQ5fdsrW9E4O5hG3h2JXh0iytclWshDK3XubNm6gIV4PDIa9C6w==
   dependencies:
     "@types/node" "^10.12.27"
 
